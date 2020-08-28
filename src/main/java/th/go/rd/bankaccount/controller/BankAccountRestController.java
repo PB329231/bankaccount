@@ -16,9 +16,9 @@ public class BankAccountRestController {
         this.repository = repository;
     }
 
-    @GetMapping("/customer/{id}")
-    public List<BankAccount> getAllCustomerId(@PathVariable int id) {
-        return repository.findByCustomerId(id);
+    @GetMapping("/customer/{customerId}")
+    public List<BankAccount> getAllCustomerId(@PathVariable int customerId) {
+        return repository.findByCustomerId(customerId);
     }
 
     @GetMapping
